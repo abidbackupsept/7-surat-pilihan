@@ -3,7 +3,7 @@
 
 # 7 Surat Pilihan
 
-Aplikasi Al-Quran digital yang berfokus pada 7 surat pilihan (Al-Kahf, Luqman, As-Sajdah, Yasin, Ar-Rahman, Al-Waqi'ah, dan Al-Mulk) dengan fitur audio, terjemahan per kata, dan tafsir berbasis AI.
+Aplikasi Al-Quran digital yang berfokus pada 7 surat pilihan (Al-Kahf, Luqman, As-Sajdah, Yasin, Ar-Rahman, Al-Waqi'ah, dan Al-Mulk) dengan fitur audio, terjemahan per kata.
 
 </div>
 
@@ -12,7 +12,6 @@ Aplikasi Al-Quran digital yang berfokus pada 7 surat pilihan (Al-Kahf, Luqman, A
 - **7 Surat Pilihan**: Akses cepat ke surat-surat utama yang sering dibaca.
 - **Audio Recitation**: Mendukung berbagai Qari (seperti Mishary Rashid Alafasy).
 - **Word by Word**: Terjemahan dan transliterasi per kata untuk memudahkan pembelajaran.
-- **AI Verse Insight**: Penjelasan mendalam (tafsir singkat) untuk setiap ayat menggunakan Google Gemini AI.
 - **Offline Fallback**: Data lokal tersedia jika koneksi API terganggu.
 - **Progressive Web App (PWA)**: Dapat diinstal di perangkat mobile dan desktop.
 
