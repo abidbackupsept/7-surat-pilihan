@@ -12,6 +12,8 @@ const SettingsDrawer: React.FC = () => {
     toggleTransliteration,
     showTranslation,
     toggleTranslation,
+    showArabic,
+    toggleArabic,
     showPerWord,
     togglePerWord,
     quranFont,
@@ -104,6 +106,16 @@ const SettingsDrawer: React.FC = () => {
 
           {/* Toggles */}
           <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Tampilkan Teks Arab</span>
+              <button
+                onClick={toggleArabic}
+                className={`p-2 rounded-lg transition-colors ${showArabic ? 'text-emerald-600 bg-emerald-50 dark:bg-emerald-900/30' : 'text-gray-400 bg-gray-100 dark:bg-slate-800'}`}
+              >
+                {showArabic ? <Eye size={20} /> : <EyeOff size={20} />}
+              </button>
+            </div>
+
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Tampilkan Transliterasi</span>
               <button

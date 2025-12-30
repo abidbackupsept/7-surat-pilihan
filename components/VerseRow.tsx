@@ -14,7 +14,7 @@ interface VerseRowProps {
 }
 
 const VerseRow = forwardRef<HTMLDivElement, VerseRowProps>(({ verse, surahName, isPlaying, isActive, onPlay, onPause }, ref) => {
-  const { showTranslation, showPerWord, quranFont, arabicOpacity, fontSize } = useSettings();
+  const { showTranslation, showArabic, showPerWord, quranFont, arabicOpacity, fontSize } = useSettings();
 
   // Helper to clean translation text (remove footnotes like <sup foot_note=...>)
   const cleanTranslation = (text: string) => {
@@ -105,51 +105,55 @@ const VerseRow = forwardRef<HTMLDivElement, VerseRowProps>(({ verse, surahName, 
 
         {/* Right Content: Words & Translation */}
         <div className="flex-1">
-          {/* Conditional rendering for per-word or full verse */}
-          {showPerWord ? (
-            <div className="flex flex-wrap mb-10" dir="rtl">
-              {allWords.map((word) => (
-                <Word key={word.id} word={word} />
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-wrap mb-10" dir="rtl">
-              {allWords.map(word => {
-                if (word.char_type_name === 'end') {
-                  return (
-                    <div
-                      key={word.id}
-                      className={`leading-loose transition-all duration-300 text-emerald-600 dark:text-emerald-400 font-uthmani`}
-                      dir="rtl"
-                      style={{
-                        fontSize: `${getFontSize(fontSize)}rem`,
-                        opacity: arabicOpacity/100,
-                        height: `${getFontSize(fontSize)}rem`,
-                        display: 'flex',
-                        alignItems: 'center',
-                        margin: '10px 0.1rem'
-                      }}
-                    >
-                      {word.text_uthmani}
-                    </div>
-                  );
-                }
-                
-                return (
-                  <span
-                    key={word.id}
-                    className={`font-${quranFont} mx-1 text-gray-900 dark:text-gray-100`}
-                    style={{
-                      fontSize: `${getFontSize(fontSize)}rem`,
-                      opacity: arabicOpacity/100,
-                      display: 'inline-block'
-                    }}
-                  >
-                    {word.text_uthmani}
-                  </span>
-                );
-              })}
-            </div>
+          {showArabic && (
+            <>
+              {/* Conditional rendering for per-word or full verse */}
+              {showPerWord ? (
+                <div className="flex flex-wrap mb-10" dir="rtl">
+                  {allWords.map((word) => (
+                    <Word key={word.id} word={word} />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-wrap mb-10 gap-y-10 md:gap-y-14" dir="rtl">
+                  {allWords.map(word => {
+                    if (word.char_type_name === 'end') {
+                      return (
+                        <div
+                          key={word.id}
+                          className={`leading-loose transition-all duration-300 text-emerald-600 dark:text-emerald-400 font-uthmani`}
+                          dir="rtl"
+                          style={{
+                            fontSize: `${getFontSize(fontSize)}rem`,
+                            opacity: arabicOpacity/100,
+                            height: `${getFontSize(fontSize)}rem`,
+                            display: 'flex',
+                            alignItems: 'center',
+                            margin: '10px 0.1rem'
+                          }}
+                        >
+                          {word.text_uthmani}
+                        </div>
+                      );
+                    }
+                    
+                    return (
+                      <span
+                        key={word.id}
+                        className={`font-${quranFont} mx-1 text-gray-900 dark:text-gray-100`}
+                        style={{
+                          fontSize: `${getFontSize(fontSize)}rem`,
+                          opacity: arabicOpacity/100,
+                          display: 'inline-block'
+                        }}
+                      >
+                        {word.text_uthmani}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+            </>
           )}
 
           {/* Full Translation */}

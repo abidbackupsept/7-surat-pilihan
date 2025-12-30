@@ -19,6 +19,8 @@ interface SettingsContextType {
   toggleTransliteration: () => void;
   showTranslation: boolean;
   toggleTranslation: () => void;
+  showArabic: boolean;
+  toggleArabic: () => void;
   showPerWord: boolean; // Tampilan per kata
   togglePerWord: () => void; // Toggle tampilan per kata
   quranFont: QuranFont;
@@ -53,6 +55,10 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [showTranslation, setShowTranslation] = useState<boolean>(() => {
     const storedTranslation = localStorage.getItem('showTranslation');
     return storedTranslation ? JSON.parse(storedTranslation) : true;
+  });
+  const [showArabic, setShowArabic] = useState<boolean>(() => {
+    const storedArabic = localStorage.getItem('showArabic');
+    return storedArabic ? JSON.parse(storedArabic) : true;
   });
   const [showPerWord, setShowPerWord] = useState<boolean>(() => {
     const storedPerWord = localStorage.getItem('showPerWord');
@@ -96,6 +102,10 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [showTranslation]);
 
   useEffect(() => {
+    localStorage.setItem('showArabic', JSON.stringify(showArabic));
+  }, [showArabic]);
+
+  useEffect(() => {
     localStorage.setItem('showPerWord', JSON.stringify(showPerWord));
   }, [showPerWord]);
 
@@ -114,6 +124,7 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
   const toggleTransliteration = () => setShowTransliteration(prev => !prev);
   const toggleTranslation = () => setShowTranslation(prev => !prev);
+  const toggleArabic = () => setShowArabic(prev => !prev);
   const togglePerWord = () => setShowPerWord(prev => !prev);
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -128,6 +139,8 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       toggleTransliteration,
       showTranslation,
       toggleTranslation,
+      showArabic,
+      toggleArabic,
       showPerWord,
       togglePerWord,
       quranFont,
