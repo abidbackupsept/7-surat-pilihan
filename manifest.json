@@ -1,0 +1,41 @@
+{
+"name": "7 Surat Pilihan",
+"short_name": "7 Surat",
+"start_url": "/",
+"display": "standalone",
+"description": "An application that provides access to 7 selected Surahs from the Quran.",
+"lang": "id",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "any",
+"icons": [
+    {
+        "src": "./icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "./icon_192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "./screen.png",
+        "sizes": "877x590",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+],
+"shortcuts": [
+    {
+        "name":"7 Surat Pilihan",
+        "url":"/",
+        "description":"Buka Aplikasi 7 Surat Pilihan"
+    }
+]
+}

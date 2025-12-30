@@ -1,0 +1,109 @@
+{
+  "chapters": [
+    {
+      "id": 18,
+      "revelation_place": "makkah",
+      "revelation_order": 69,
+      "bismillah_pre": true,
+      "name_simple": "Al-Kahf",
+      "name_complex": "Al-Kahf",
+      "name_arabic": "الكهف",
+      "verses_count": 110,
+      "pages": [294, 304],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Para Penghuni Gua"
+      }
+    },
+    {
+      "id": 31,
+      "revelation_place": "makkah",
+      "revelation_order": 57,
+      "bismillah_pre": true,
+      "name_simple": "Luqman",
+      "name_complex": "Luqman",
+      "name_arabic": "لقمان",
+      "verses_count": 34,
+      "pages": [411, 415],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Luqman"
+      }
+    },
+    {
+      "id": 32,
+      "revelation_place": "makkah",
+      "revelation_order": 75,
+      "bismillah_pre": true,
+      "name_simple": "As-Sajdah",
+      "name_complex": "As-Sajdah",
+      "name_arabic": "السجدة",
+      "verses_count": 30,
+      "pages": [415, 418],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Sujud"
+      }
+    },
+    {
+      "id": 36,
+      "revelation_place": "makkah",
+      "revelation_order": 41,
+      "bismillah_pre": true,
+      "name_simple": "Ya-Sin",
+      "name_complex": "Ya-Sin",
+      "name_arabic": "يس",
+      "verses_count": 83,
+      "pages": [440, 445],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Ya-Sin"
+      }
+    },
+    {
+      "id": 55,
+      "revelation_place": "madinah",
+      "revelation_order": 97,
+      "bismillah_pre": true,
+      "name_simple": "Ar-Rahman",
+      "name_complex": "Ar-Rahman",
+      "name_arabic": "الرحمن",
+      "verses_count": 78,
+      "pages": [531, 534],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Yang Maha Pengasih"
+      }
+    },
+    {
+      "id": 56,
+      "revelation_place": "makkah",
+      "revelation_order": 46,
+      "bismillah_pre": true,
+      "name_simple": "Al-Waqi'ah",
+      "name_complex": "Al-Waqi'ah",
+      "name_arabic": "الواقعة",
+      "verses_count": 96,
+      "pages": [534, 537],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Hari Kiamat"
+      }
+    },
+    {
+      "id": 67,
+      "revelation_place": "makkah",
+      "revelation_order": 77,
+      "bismillah_pre": true,
+      "name_simple": "Al-Mulk",
+      "name_complex": "Al-Mulk",
+      "name_arabic": "الملك",
+      "verses_count": 30,
+      "pages": [558, 560],
+      "translated_name": {
+        "language_name": "indonesian",
+        "name": "Kerajaan"
+      }
+    }
+  ]
+}

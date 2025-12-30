@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'LPMQ';
+  src: url('../public/fonts/LPMQ IsepMisbah.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UthmanicHafs';
+  src: url('../public/fonts/UthmanicHafs1Ver18.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IndoPak';
+  src: url('../public/fonts/indopak-nastaleeq-waqf-lazim-v4.2.1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS global lainnya */
+
+.font-lpmq {
+  font-family: 'LPMQ', serif;
+}
+
+.font-uthmani {
+  font-family: 'UthmanicHafs', serif;
+}
+
+.font-indopak {
+  font-family: 'IndoPak', serif;
+}
