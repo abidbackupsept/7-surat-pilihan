@@ -36,13 +36,7 @@ Aplikasi ini menggunakan data dari sumber berikut:
    npm install
    ```
 
-3. **Konfigurasi Environment:**
-   Buat file `.env.local` dan masukkan API Key Gemini Anda:
-   ```env
-   GEMINI_API_KEY=your_api_key_here
-   ```
-
-4. **Jalankan Aplikasi:**
+3. **Jalankan Aplikasi:**
    ```bash
    npm run dev
    ```
@@ -54,7 +48,6 @@ Aplikasi ini menggunakan data dari sumber berikut:
 - TypeScript
 - Tailwind CSS
 - Lucide React
-- Google Generative AI SDK
 
 ---
 Dibuat dengan ❤️ untuk memudahkan interaksi dengan Al-Quran.
